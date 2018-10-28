@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比价搜索</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/category.css">
+    <!-- 动态监测屏幕宽度变化并计算html根字体的大小 实现rem布局 -->
+    <script src="./js/common/adaptor.js"></script>
+</head>
+
+<body>
+    <div class="mmm_container">
+        <!-- 慢慢买头部区域 -->
+        <div class="m_header">
+            <div class="logo"></div>
+            <div class="download"></div>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="m_search">
+            <div class="form">
+                <input type="text" placeholder="请输入你想比价的商品">
+                <button>搜索</button>
+            </div>
+        </div>
+
+        <!-- 中间商品列表部分 -->
+        <div class="main">
+            <!-- <ul class="category-title">
+                <li><a href="#">大家电</a>
+                <ul class="category-content">
+                    <li><a href="#">电视电商电视电视</a></li>
+                </ul>
+                </li>
+            </ul> -->
+        </div>
+
+
+        <!-- 底部区域  -->
+        <div class="m_footer">
+            <div class="footer_t clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部</a>
+            </div>
+            <div class="footer_b">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台        
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div> 
+
+    <!-- 准备中间商品部分的模板 -->
+    <script type="text/html" id="t-tpl">
+        <ul class="category-title">
+            {{each result v i}}
+                <li class="title1">
+                    <a href="#" titleid={{ v.titleId }}>{{v.title}}</a>
+                     <ul class="category-content clearfix">
+                        <!-- 这里需要第二层模板引擎绑定数据渲染 -->
+                        <!-- <li><a href="#">电视电商电视电视</a></li> -->
+                    </ul>
+                </li>
+            {{/each}}
+        </ul> 
+    </script>
+
+    <!-- 中间商品li下面显示与隐藏的模板 -->
+  <script type="text/html" id="c-tpl">
+         {{each result v i}}
+            <li class="title2">
+                <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid={{v.categoryId}}">{{v.category}}</a>
+                <!-- categoryid=1&category=空调&pageid=1 -->
+            </li>
+        {{/each}}
+  </script>
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+   <script src="./js/category.js"></script>
+</body>
+
+</html>

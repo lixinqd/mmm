@@ -1,0 +1,2 @@
+[1012/231941.065:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name metrics_client_id, discarding value a2359fa0a0c54ba88ee23a3895f254dc
+[1012/232002.926:ERROR:http_transport_win.cc(273)] WinHttpSendRequest: 无法与服务器建立连接 (0x2efd)

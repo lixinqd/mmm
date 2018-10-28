@@ -1,0 +1,247 @@
+//省钱控商品详情
+
+// 引入bass
+@import "base";
+// @import "adaptor";
+// 首页样式
+.mmm_container {
+    width: 100%;
+    height: 2000px;
+    min-width: 320px;
+    max-width: 640px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+// 头部样式
+.m_header {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #FF841D;
+    position: relative;
+    h2 {
+        text-align: center;
+        line-height: 0.5rem;
+        color: #fff;
+    }
+    .logo a {
+        width: 50px;
+        height: 25px;      
+        background: url('../images/icback.svg') no-repeat;
+        // background-size: 185.5px 25px;
+        position: absolute;
+        left: 10px;
+        top: 12px;
+    }
+    .download {
+        width: 34px;
+        height: 34px;
+        background: url('../images/header_app.png') no-repeat;
+        background-size: 34px 34px;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+    }
+}
+
+
+
+// 底部
+.m_footer {
+    margin-top: 20px;
+    .footer_t {
+        // height: 34px;
+        a {
+            float: left;
+            // font-size: 100px;
+            height: 0.34rem;
+            width: 33.3%;
+            // background-color: lime;
+            text-align: center;
+            line-height: 0.34rem;
+            border: 1px solid #ccc;
+        }
+        a:last-child {
+            // background-color: red;
+            position: relative;
+            img {
+                width: 15px;
+                height: 15px;
+               position: absolute;
+               left: 0.6rem;
+               top: 8px;
+            }
+        }
+    }
+    .footer_b {
+        width: 100%;
+        height: 60px;
+        // background-color: lime;
+        padding: 0.1rem 0;
+        p {
+            text-align: center;
+            color: #ccc;
+            a:first-child {
+                color: red;
+            }
+        }
+    }
+}
+//头部和底部公共样式结束=====================================================================
+
+//产品详情
+.product_container {
+    padding: 10px;
+
+.product_details {
+    width: 100%;
+    h3 {
+        height: 30px;
+        // background-color: lime;
+       line-height: 30px;
+       margin: 10px auto;
+    }
+    .small {
+        font-size: 12px;
+        color: gray;
+        margin: 10px auto;
+        .addtime {
+            padding: 0 10px;
+        }
+    }
+
+    .content {
+        width: 100%;
+        .smallimg {
+            width: 120px;
+            height: 120px;
+            // background-color: blue;
+            float: right;
+        }
+        .p1,.p2{ font-size: 16px;}
+        .p2 {
+            margin-top: 10px;
+        }
+        .bigimg {
+            width: 350px;
+            height: 350px;
+            background-color: coral;
+        }
+        .city {
+            width: 100%;
+            ul {
+                width: 138px;
+                margin: 0 auto;
+                padding: 0 20px;
+                box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+                li {
+                    width: 100px;
+                    height: 20px;
+                    border-bottom: 1px dashed #ccc;
+                    .left {
+                        float: left;
+                    }
+                    .right {
+                        float: right;
+                        color: orange;
+                    }
+                }
+            }
+        }
+
+        .shop {
+            width: 100%;
+            // height: 30px;
+            padding: 10px 10px;
+            a {
+                display: block;
+                width: 100%;
+                height: 30px;
+                background-color: orangered;
+                color: #fff;
+                text-align: center;
+                line-height: 30px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.product_info {
+    width: 550px;
+    height: 220px;
+    margin: 0 auto;
+    // background-color: blue;
+}
+.appraise {
+    .speak {
+        width: 100%;        
+        height: 33px;
+        // background-color: lime;
+        line-height: 33px;
+        font-size: 18px;
+    }
+    .form {
+        width: 100%;
+        border: 1px solid #ccc;
+        textarea {
+            height: 68px;
+        }
+        .down {
+            height: 36px;
+            // background-color: pink;
+            position: relative;
+            button {
+                width: 100px;
+                height: 36px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 16px;
+                color: #fff;
+                background-color: orange;
+                border: none;
+            }
+        }
+    }
+    .news {
+        padding: 6px;  
+        .new {
+            width: 100%;
+            height: 33px;
+            // background-color: lime; 
+            line-height: 33px;
+            font-size: 18px;
+                 
+        }
+    }
+    .info_bottom {
+        a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            // background-color: blue;
+            float: left;
+        }
+        .right{
+            height: 43px;
+            overflow: hidden;
+            position: relative;
+            .username{
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .usetime {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .useinfo {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+}

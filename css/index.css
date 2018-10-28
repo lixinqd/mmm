@@ -1,0 +1,282 @@
+@charset "UTF-8";
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family: 'Microsoft YaHei', sans-serif;
+  background-color: #f5f5f5;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input[type="text"],
+input[type="search"],
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.hide {
+  display: none;
+}
+.mmm_container {
+  width: 100%;
+  height: 2000px;
+  min-width: 320px;
+  max-width: 640px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.m_header {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #FF841D;
+  position: relative;
+}
+.m_header .logo {
+  width: 185px;
+  height: 25px;
+  background: url('../images/header_logo.png') no-repeat;
+  background-size: 185.5px 25px;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+.m_header .download {
+  width: 34px;
+  height: 34px;
+  background: url('../images/header_app.png') no-repeat;
+  background-size: 34px 34px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+.m_search {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #fff;
+  padding: 0.1rem;
+}
+.m_search .form {
+  width: 100%;
+  height: 100%;
+  padding-right: 0.7rem;
+  position: relative;
+}
+.m_search .form input {
+  width: 100%;
+  height: 0.3rem;
+  padding-left: 15px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f1f1f1;
+}
+.m_search .form button {
+  width: 0.63rem;
+  height: 0.3rem;
+  background-color: #FF841D;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 0.16rem;
+  line-height: 0.3rem;
+}
+.m_nav {
+  padding: 10px 0;
+}
+.m_nav li {
+  float: left;
+  width: 25%;
+}
+.m_nav li a {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+.m_nav li img {
+  width: 0.5rem;
+  height: 0.5rem;
+  display: block;
+  margin: 0 auto;
+}
+.m_list_title {
+  width: 100%;
+  height: 0.36rem;
+  background-color: orange;
+  padding-left: 10px;
+}
+.m_list_title span {
+  line-height: 0.35rem;
+  color: #fff;
+  font-size: 0.16rem;
+}
+.m_list_title img {
+  width: 0.2rem;
+  height: 0.2rem;
+  float: right;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+.m_product li {
+  width: 100%;
+  height: 1.2rem;
+  padding: 0.15rem 0.1rem;
+  border-bottom: 1px solid #000;
+}
+.m_product li .pic {
+  width: 1rem;
+  height: 1rem;
+  float: left;
+  background-color: blue;
+}
+.m_product li .info {
+  width: 5rem;
+  height: 1rem;
+  float: left;
+  position: relative;
+}
+.m_product li .info .title {
+  font-size: 0.16rem;
+}
+.m_product li .info .title span {
+  color: red;
+}
+.m_product li .info .other {
+  position: absolute;
+  left: 0.1rem;
+  bottom: 0.1rem;
+  font-size: 0.12rem;
+}
+.m_product li .info .comment {
+  width: 25px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.m_product li .info .comment .icon-comment {
+  width: 16px;
+  height: 15px;
+  display: block;
+  background: url('../images/comment.svg');
+  float: left;
+}
+.m_product li .info .comment .num {
+  float: right;
+}
+.m_minfo {
+  width: 100%;
+  height: 0.32rem;
+}
+.m_minfo a {
+  display: block;
+  text-align: center;
+  line-height: 0.32rem;
+  margin: 0.1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+.m_brand {
+  width: 100%;
+  height: 0.35rem;
+  background-color: orange;
+  padding-left: 0.1rem;
+  position: relative;
+}
+.m_brand span {
+  line-height: 0.35rem;
+  color: #fff;
+  font-size: 0.18rem;
+}
+.m_brand img {
+  width: 0.2rem;
+  height: 0.2rem;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+.m_footer .footer_t a {
+  float: left;
+  height: 0.34rem;
+  width: 33.3%;
+  text-align: center;
+  line-height: 0.34rem;
+  border: 1px solid #ccc;
+}
+.m_footer .footer_t a:last-child {
+  position: relative;
+}
+.m_footer .footer_t a:last-child img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 0.6rem;
+  top: 8px;
+}
+.m_footer .footer_b {
+  width: 100%;
+  height: 60px;
+  padding: 0.1rem 0;
+}
+.m_footer .footer_b p {
+  text-align: center;
+  color: #ccc;
+}
+.m_footer .footer_b p a:first-child {
+  color: red;
+}
+.product_title {
+  width: 100%;
+  height: 0.4rem;
+  background-color: #ebebeb;
+  line-height: 0.4rem;
+  padding-left: 0.1rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.product_title .product_title_left {
+  float: left;
+}
+.product_title button {
+  float: right;
+  width: 0.6rem;
+  height: 0.3rem;
+  border-radius: 6px;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 0.16rem;
+}

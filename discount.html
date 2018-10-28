@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣商品详情</title>
+    <link rel="stylesheet" href="./css/discount.css">
+    <!-- 动态监测屏幕宽度变化并计算html根字体的大小 实现rem布局 -->
+    <script src="./js/common/adaptor.js"></script>
+</head>
+
+<body>
+    <div class="mmm_container">
+        <!-- 慢慢买头部区域 -->
+        <div class="m_header">
+            <div class="logo">
+                <a href="inlanddiscount.html"></a>
+            </div>
+            <h2>国内折扣商品详情</h2>
+            <div class="download"></div>
+        </div>
+
+        <!-- 折扣商品详情 -->
+        <div class="product_container">
+            <!-- 产品详情 -->
+            <!-- <div class="product_details">
+
+                <h3>西域美农新疆特产五星和田红枣250g*2</h3>
+                <div class="small">
+                    <span class="mall">京东商城</span>
+                    <span class="addtime">10-25 14:10</span>
+                    <span class="other">小编烟火 / 慢慢买</span>
+                </div>
+                <div class="content">
+                    <div class="smallimg">
+                        <img src="" alt="">
+                    </div>
+                    <p class="p1">原价25.9一斤，凑满5件只要99元价格。 枣子紧实，入口甜爽。适合公司人多的买吧，价格还是不错的。</p>
+
+                    <div class="bigimg">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="shop">
+                        <a href="#">前往购买</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product_info">
+                <img src="" alt="">
+            </div>
+
+            <div class="appraise">
+                <p class="speak">发表评论</p>
+                <div class="form">
+                    <textarea></textarea>
+                    <div class="down">
+                        <button>发表评论</button>
+                    </div>
+                </div>
+                <div class="news">
+                    <p class="new">最新评论</p>
+                </div> -->
+
+                <!-- <div class="info_bottom">
+                    <a href="#">
+                        <img src="" alt="">
+                    </a>
+                    <div class="right">
+                        <div class="username">用户名</div>
+                        <div class="usetime">2016/10/25 14:18:45</div>
+                        <div class="useinfo">比超市便宜了几块</div>
+                    </div>
+                </div> -->
+            </div>
+       
+
+
+
+
+
+        <!-- 底部区域 -->
+        <div class="m_footer">
+            <div class="footer_t clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+                </a>
+            </div>
+            <div class="footer_b">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 准备产品详情的模板 -->
+<script type="text/html" id="tmp">
+    {{each result v i}}
+    <div class="product_details">
+            <!-- 这里通过模板动态渲染 -->
+        <h3>{{v.productName}}</h3>
+        <h4>{{v.productPrice}}</h4>
+        <div class="small">
+            <span class="mall">{{v.productFrom}}</span>
+            <span class="addtime">{{v.productTime}}</span>
+            <span class="other">{{v.productTips}}</span>
+        </div>
+        <div class="content">
+            <div class="smallimg">
+               <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/24/190_190_0_36618798b6e1a98d9f4ae8f7a195f41b.jpg" alt="">
+            </div>
+            <p class="p1">{{v.productInfo}}</p>
+            <!-- <p class="p2">{{v.productInfo1}}</p> -->
+            <div class="bigimg">
+                {{@v.productImg}}
+            </div>
+    
+            <div class="shop">
+                <a href="#">前往购买</a>
+            </div>
+        </div>
+    </div>
+    <!-- 产品信息 二维码图 -->
+    <div class="product_info">
+        <img src="./images/mmbweixin2.png" alt="">
+    </div>
+    <!-- 评价 -->
+    <div class="appraise">
+        <p class="speak">发表评论</p>
+        <div class="form">
+            <textarea ></textarea>
+            <div class="down">
+                    <button>发表评论</button>
+            </div>
+        </div>
+        <div class="news">
+            <p class="new">最新评论</p>
+         </div>
+        <!-- <div class="info_bottom">
+            <a href="#">{{@v.productImgLg}}</a>
+            <div class="right">
+                <div class="username">用户名</div>
+                <div class="usetime">2016/10/25 14:18:45</div>
+                <div class="useinfo">比超市便宜了几块</div>
+            </div>
+        </div> 
+    
+    
+    后台评论区代码数据
+    "<div class="tit">
+                发表评论</div>
+            <div class="reply">
+                <div class="form">
+                    <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+                    <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友58***74" type="hidden">
+                    <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="Apple iPhone 6 64GB 金色 移动联通电信4G手机" type="hidden">
+                    <div class="ctrl">
+                        <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+                    </div>
+                </div>
+            </div>
+            <div class="tit" id="newcomment">
+                最新评论</div>
+            <div class="list">
+                <ul>
+                    
+                </ul>
+         </div>"
+    
+    
+    -->
+    </div> 
+    {{/each}}
+</script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common/get.js"></script>
+    <script src="./js/discount.js"></script>
+</body>
+
+</html>

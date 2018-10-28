@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+    <!-- 动态监测屏幕宽度变化并计算html根字体的大小 实现rem布局 -->
+    <script src="./js/common/adaptor.js"></script>
+</head>
+
+<body>
+    <div class="mmm_container">
+        <!-- 慢慢买头部区域 -->
+        <div class="m_header">
+            <div class="logo">
+                <a href="index.html"></a>
+            </div>
+            <h2>省钱控--最新优惠</h2>
+            <div class="download"></div>
+        </div>
+
+
+
+        <!-- 产品部分 -->
+        <div class="m_product">
+            <!-- 这里通过模板动态渲染 -->
+
+
+        </div>
+
+
+
+
+
+        <!-- 底部区域 -->
+        <div class="m_footer">
+            <div class="footer_t clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+                </a>
+            </div>
+            <div class="footer_b">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- 产品部分的模板 -->
+    <script type="text/html" id="tpl">
+        <ul class="clearfix">
+            {{ each result v i }}
+            <li>
+                <a href="moneyproduct.html?productid={{v.productId}}">
+                    <div class="pic">{{@v.productImgSm}}</div>
+                    <div class="info">
+                        <div class="title">
+                            {{ v.productName }}
+                            <span>{{v.productPinkage}}</span>
+                        </div>
+
+                        <div class="other">
+                            <span>{{v.productFrom}} | {{v.productTime}}</span>                          
+                        </div>
+                        <span class="comment clearfix">
+                                <i class="icon-comment"></i>
+                                <i class="num">
+                                     {{v.productComCount.replace("有","").replace("人评论","")}}
+                                </i>
+                               
+                        </span>
+                    </div>
+                </a>
+            </li>
+            {{ /each }}
+
+        </ul>
+          <!-- 商品分页按钮 -->
+        <div class="page">
+            <ul class="clearfix">
+                <li><a href="#">上一页</a></li>
+                <li>
+                    <select name="selectPage" id="select">
+                        {{each pageList v i}}
+                        {{if v.pageid == pageid}}
+                        <option value="{{v.pageid}}" selected>{{v.pageid}}/{{v.pages}}</option>
+                        {{else}}
+                        <option value="{{v.pageid}}">{{v.pageid}}/{{v.pages}}</option>
+                        {{/if}}
+                        {{/each}}
+                    </select>
+                </li>
+                <li><a href="#">下一页</a></li>
+            </ul>
+        </div>
+    </script>
+    <!-- 分页模板 -->
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common/get.js"></script>
+    <script src="./js/moneyctrl.js"></script>
+</body>
+
+</html>

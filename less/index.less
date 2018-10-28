@@ -1,0 +1,361 @@
+// 引入bass
+@import "base";
+// @import "adaptor";
+// 首页样式
+.mmm_container {
+    width: 100%;
+    height: 2000px;
+    min-width: 320px;
+    max-width: 640px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+// 头部样式
+.m_header {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #FF841D;
+    position: relative;
+    .logo {
+        width: 185px;
+        height: 25px;      
+        background: url('../images/header_logo.png') no-repeat;
+        background-size: 185.5px 25px;
+        position: absolute;
+        left: 10px;
+        top: 12px;
+    }
+    .download {
+        width: 34px;
+        height: 34px;
+        background: url('../images/header_app.png') no-repeat;
+        background-size: 34px 34px;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+    }
+}
+// 搜索框
+.m_search {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #fff;
+    padding: 0.1rem;
+    // margin-bottom: 0.1rem;
+   .form {
+       width: 100%;
+       height: 100%;
+       padding-right: 0.7rem;
+       position: relative;
+    input {
+        width: 100%;
+        height: 0.3rem;
+        padding-left: 15px;
+        border: none;
+        border-radius: 15px;
+        background-color: #f1f1f1;
+    }
+    button {
+        width: 0.63rem;
+        height: 0.3rem;
+        background-color: #FF841D;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        border-radius: 15px;
+        color: #fff;
+        font-size: 0.16rem;
+        line-height: 0.3rem;
+    }
+   }
+}
+// 导航部分
+.m_nav {
+    padding: 10px 0;
+     li {
+        float: left;
+        width: 25%;
+        a {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+        img {
+            width: 0.5rem;
+            height: 0.5rem;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+// 列表标题
+.m_list_title {
+    width: 100%;
+    height: 0.36rem;
+    background-color: orange;
+    padding-left: 10px;
+    span {
+        line-height: 0.35rem;
+        color: #fff;
+        font-size: 0.16rem;
+    }
+    img {
+        width: 0.2rem;
+        height: 0.2rem;
+        float: right;
+        margin-top: 8px;
+        margin-right: 8px;
+    }
+}
+// 产品部分
+.m_product {
+    li {
+        width: 100%;
+        height: 1.2rem;
+        padding: 0.15rem 0.1rem;
+        border-bottom: 1px solid #000;
+        .pic {
+            width: 1rem;
+            height: 1rem;
+            float: left;
+            background-color: blue;
+        }
+        .info {
+            width: 5rem;
+            height: 1rem;
+            // background-color: lime;
+            float: left;
+            position: relative;
+            .title {
+                font-size: 0.16rem;
+                span {
+                    color: red;
+                }
+            }
+            .other {
+                position: absolute;
+                left: 0.1rem;
+                bottom: 0.1rem;
+                font-size: 0.12rem;
+            
+              
+            }
+            .comment {
+                // display: block;
+                width: 25px;
+                height: 15px;
+                // background-color: blue;
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                .icon-comment{
+                    width: 16px;
+                    height: 15px;
+                    display: block;
+                    background: url('../images/comment.svg');
+                    float: left;
+                }
+                .num {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+// 更多优惠信息
+.m_minfo {
+    width: 100%;
+    height: 0.32rem;
+    // background-color: lime;
+  
+    a {
+        display: block;
+        text-align: center;
+        line-height: 0.32rem;
+        margin: 0.1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+    }
+}
+// 品牌排行
+.m_brand {
+    width: 100%;
+    height: 0.35rem;
+    background-color: orange;
+    padding-left: 0.1rem;
+    position: relative;
+    span {
+        line-height: 0.35rem;
+        color: #fff;
+        font-size: 0.18rem;
+    }
+    img {
+        width: 0.2rem;
+        height: 0.2rem;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+    }
+}
+// 底部
+.m_footer {
+    .footer_t {
+        // height: 34px;
+        a {
+            float: left;
+            // font-size: 100px;
+            height: 0.34rem;
+            width: 33.3%;
+            // background-color: lime;
+            text-align: center;
+            line-height: 0.34rem;
+            border: 1px solid #ccc;
+        }
+        a:last-child {
+            // background-color: red;
+            position: relative;
+            img {
+                width: 15px;
+                height: 15px;
+               position: absolute;
+               left: 0.6rem;
+               top: 8px;
+            }
+        }
+    }
+    .footer_b {
+        width: 100%;
+        height: 60px;
+        // background-color: lime;
+        padding: 0.1rem 0;
+        p {
+            text-align: center;
+            color: #ccc;
+            a:first-child {
+                color: red;
+            }
+        }
+    }
+}
+
+
+
+//商品列表部分 标题
+.product_title {
+    width: 100%;
+    height: 0.4rem;
+    background-color: #ebebeb;
+    line-height: 0.4rem;
+    padding-left: 0.1rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    .product_title_left{
+        float: left;
+    }
+    button {
+        float: right;
+        width: 0.6rem;
+        height: 0.3rem;
+        border-radius: 6px;
+        margin-top: 5px;
+        margin-right: 5px;
+        font-size: 0.16rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

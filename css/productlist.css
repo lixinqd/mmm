@@ -1,0 +1,79 @@
+.product_title {
+  width: 100%;
+  height: 0.4rem;
+  background-color: #ebebeb;
+  line-height: 0.4rem;
+  padding-left: 0.1rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.product_title .product_title_left {
+  float: left;
+}
+.product_title button {
+  float: right;
+  width: 0.6rem;
+  height: 0.3rem;
+  border-radius: 6px;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 0.16rem;
+}
+.procuct_list li {
+  width: 100%;
+  height: 118px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.procuct_list li a {
+  display: block;
+}
+.procuct_list li .img {
+  width: 1rem;
+  height: 1rem;
+  background-color: blue;
+  float: left;
+}
+.procuct_list li .info {
+  height: 100px;
+  overflow: hidden;
+}
+.procuct_list li .info p {
+  height: 44px;
+  font-size: 0.16rem;
+}
+.procuct_list li .info .price {
+  height: 25px;
+  color: red;
+}
+.procuct_list li .info .other {
+  height: 25px;
+  font-size: 0.12rem;
+}
+.page {
+  width: 100%;
+  height: 36px;
+  margin-top: 10px;
+}
+.page li {
+  width: 33.3%;
+  float: left;
+  text-align: center;
+  line-height: 36px;
+}
+.page li select {
+  width: 77px;
+  height: 34px;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+}
+.page li a {
+  display: block;
+  width: 0.8rem;
+  height: 0.36rem;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ccc;
+}

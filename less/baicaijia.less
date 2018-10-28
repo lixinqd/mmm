@@ -1,0 +1,271 @@
+//白菜价
+
+// 引入bass
+@import "base";
+// @import "adaptor";
+// 首页样式
+.mmm_container {
+    width: 100%;
+    // height: 2000px;
+    min-width: 320px;
+    max-width: 640px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+// 头部样式
+.m_header {
+    width: 100%;
+    height: 0.5rem;
+    background-color: rgb(255, 29, 59);
+    position: relative;
+    h2 {
+        text-align: center;
+        line-height: 0.5rem;
+        color: #fff;
+    }
+    .logo a {
+        width: 50px;
+        height: 25px;      
+        background: url('../images/icback.svg') no-repeat;
+        // background-size: 185.5px 25px;
+        position: absolute;
+        left: 10px;
+        top: 12px;
+    }
+    .download {
+        width: 34px;
+        height: 34px;
+        background: url('../images/header_app.png') no-repeat;
+        background-size: 34px 34px;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+    }
+}
+
+
+
+// 底部
+.m_footer {
+    margin-top: 20px;
+    // position: fixed;
+    // left: 0;
+    // bottom: 0;
+    .footer_t {
+        // height: 34px;
+        a {
+            float: left;
+            // font-size: 100px;
+            height: 0.34rem;
+            width: 33.3%;
+            // background-color: lime;
+            text-align: center;
+            line-height: 0.34rem;
+            border: 1px solid #ccc;
+        }
+        a:last-child {
+            // background-color: red;
+            position: relative;
+            // position: fixed;
+            img {
+                width: 15px;
+                height: 15px;
+               position: absolute;
+               left: 0.6rem;
+               top: 8px;
+            }
+        }
+    }
+    .footer_b {
+        width: 100%;
+        height: 60px;
+        // background-color: lime;
+        padding: 0.1rem 0;
+        p {
+            text-align: center;
+            color: #ccc;
+            a:first-child {
+                color: red;
+            }
+        }
+    }
+}
+//头部和底部公共样式结束================================================
+
+
+
+.title-list {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    // background-color: lime;
+    position: relative;
+    // a.current  {
+    //     color: red;
+    //     border-bottom: 2px solid red;
+    // }
+    ul {
+        width: 200%;
+        // overflow: hidden;
+        height: 40px;
+        border-bottom: 1px solid #ccc;
+    }
+    li {
+        &.current a {
+            color: red;
+            border-bottom: 2px solid red;
+        }
+        float: left;
+        line-height: 38px;
+        a {
+            display: block;
+            // padding: 0 12px;
+            margin: 0 12px;
+            
+        }
+    }
+    .search_box {
+        .icon-search{
+            width: 38px;
+            height: 38px;
+            background-color: rgb(226, 205, 205);
+            z-index: 666;
+            position: absolute;
+            right: 0;
+            top: 0;
+            // background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17' height='17'><path fill='#565656' d='M978.261333 430.321067c0 157.2864-127.488 284.808533-284.8768 284.808533-157.218133 0-284.706133-127.488-284.706133-284.808533s127.488-284.7744 284.706133-284.7744c22.254933 0 43.793067 2.798933 64.648533 7.68l63.2832-192.136533c3.208533-9.352533 14.916267-14.062933 26.248533-10.410667 11.298133 3.720533 17.8176 14.5408 14.848 23.8592l-63.249067 191.488C904.055467 208.078933 978.261333 310.4448 978.261333 430.321067zM693.384533 184.834133c-135.5776 0-245.384533 109.909333-245.384533 245.521067 0 135.611733 109.943467 245.486933 245.384533 245.486933 135.68 0 245.521067-109.909333 245.521067-245.486933C938.939733 294.7776 829.064533 184.834133 693.384533 184.834133zM366.4896 683.863467l-18.261333 0L98.6112 683.863467c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.049067 9.762133-21.8112 21.8112-21.8112l249.617067 0 5.461333 0c9.147733 15.189333 19.114667 29.832533 30.139733 43.588267L366.4896 683.863467zM297.7792 457.866667 277.6064 457.866667 98.6112 457.866667c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.0832 9.762133-21.8112 21.8112-21.8112l176.708267 0c0 0 0 0 0 0.034133l22.459733 0c-0.4096 7.236267-1.092267 14.404267-1.092267 21.777067S297.3696 450.6304 297.7792 457.866667zM348.2624 231.869867 326.3488 231.869867 98.6112 231.869867c-12.049067 0-21.8112-9.659733-21.8112-21.8112 0-12.0832 9.762133-21.742933 21.8112-21.742933l249.617067 0 5.973333 0 12.288 0 17.339733 0c-11.025067 13.755733-20.923733 28.3648-30.071467 43.52L348.2624 231.835733zM605.3888 5.975467l-127.0784 0-122.538667 0L337.544533 5.975467 87.927467 5.975467c-12.049067 0-21.8112-9.762133-21.8112-21.845333 0-12.0832 9.762133-21.879467 21.8112-21.879467l249.617067 0 18.261333 0 122.538667 0 127.044267 0 78.711467 0-16.0768 43.6224L605.3888 5.975467z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+            background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17' height='17'><path fill='#565656' d='M978.261333 430.321067c0 157.2864-127.488 284.808533-284.8768 284.808533-157.218133 0-284.706133-127.488-284.706133-284.808533s127.488-284.7744 284.706133-284.7744c22.254933 0 43.793067 2.798933 64.648533 7.68l63.2832-192.136533c3.208533-9.352533 14.916267-14.062933 26.248533-10.410667 11.298133 3.720533 17.8176 14.5408 14.848 23.8592l-63.249067 191.488C904.055467 208.078933 978.261333 310.4448 978.261333 430.321067zM693.384533 184.834133c-135.5776 0-245.384533 109.909333-245.384533 245.521067 0 135.611733 109.943467 245.486933 245.384533 245.486933 135.68 0 245.521067-109.909333 245.521067-245.486933C938.939733 294.7776 829.064533 184.834133 693.384533 184.834133zM366.4896 683.863467l-18.261333 0L98.6112 683.863467c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.049067 9.762133-21.8112 21.8112-21.8112l249.617067 0 5.461333 0c9.147733 15.189333 19.114667 29.832533 30.139733 43.588267L366.4896 683.863467zM297.7792 457.866667 277.6064 457.866667 98.6112 457.866667c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.0832 9.762133-21.8112 21.8112-21.8112l176.708267 0c0 0 0 0 0 0.034133l22.459733 0c-0.4096 7.236267-1.092267 14.404267-1.092267 21.777067S297.3696 450.6304 297.7792 457.866667zM348.2624 231.869867 326.3488 231.869867 98.6112 231.869867c-12.049067 0-21.8112-9.659733-21.8112-21.8112 0-12.0832 9.762133-21.742933 21.8112-21.742933l249.617067 0 5.973333 0 12.288 0 17.339733 0c-11.025067 13.755733-20.923733 28.3648-30.071467 43.52L348.2624 231.835733zM605.3888 5.975467l-127.0784 0-122.538667 0L337.544533 5.975467 87.927467 5.975467c-12.049067 0-21.8112-9.762133-21.8112-21.845333 0-12.0832 9.762133-21.879467 21.8112-21.879467l249.617067 0 18.261333 0 122.538667 0 127.044267 0 78.711467 0-16.0768 43.6224L605.3888 5.975467z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 22px auto;
+        }
+      
+    }
+}
+
+//商品详情
+.product_list {
+    li {
+        // width: 100%;
+        height: 150px;
+        // background-color: pink;
+        border-bottom: 1px solid #000;
+        padding: 10px;
+        margin: 5px 0;
+            .left {
+                width: 135px;
+                height: 130px;
+                // background-color: blue;
+                float: left;
+            }
+            .right {
+                overflow: hidden;
+                height: 130px;
+                // background-color: lawngreen;
+                padding: 5px;
+                .top {
+                    height: 60px;
+                    // background-color: pink;
+                    p {
+                        height: 28px;
+                    }
+                    .price {
+                        height: 28px;
+                        span {
+                            font-size: 18px;
+                            color: red;
+                            font-weight: 700;
+                        }
+                        del {
+                            font-size: 12px;
+                            color: rgba(42, 69, 78, 0.534);
+                            margin-left: 8px;
+                        }
+                    }
+                }
+                .bottom {
+                    height: 53px;
+                    // background-color: coral;
+                    margin-top: 6px;
+                    .t {
+                        height: 25px;
+                        // line-height: 25px;
+                        i {
+                            float: left;
+                            width: 82px;
+                            height: 14px;
+                            line-height: 14px;
+                            border: 1px solid red;
+                            text-align: center;
+                            font-size: 12px;
+                            font-style: normal;
+                            margin-right: 10px;
+                            border-radius: 7px;
+                            background-color: pink;
+                            color: #fff;
+                        }
+                        b {
+                            font-weight: normal;
+                            color: red;
+                            font-size: 14px;
+                        }
+                    }
+                    .b {
+                        height: 28px;
+                        position: relative;
+                        //这里因为获取的数据中自带了3个a标签 第一个a标签是空的 所以只能选择第2个设置样式
+                        a:nth-child(2) {
+                            // width: 110px;
+                            height: 26px;
+                            border: 1px dashed red;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            color: red;
+                        }
+                        a:last-child {
+                            width: 60px;
+                            height: 28px;
+                            background-color: red;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            line-height: 28px;
+                            color: #fff;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

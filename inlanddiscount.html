@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="./css/inlanddiscount.css">
+    <!-- 动态监测屏幕宽度变化并计算html根字体的大小 实现rem布局 -->
+    <script src="./js/common/adaptor.js"></script>
+</head>
+
+<body>
+    <div class="mmm_container">
+        <!-- 慢慢买头部区域 -->
+        <div class="m_header">
+            <div class="logo">
+                <a href="index.html"></a>
+            </div>
+            <h2>国内--最新折扣</h2>
+            <div class="download"></div>
+        </div>
+
+        <!-- 折扣商品列表 -->
+        <div class="product_list">
+            <!-- <ul>
+                <li>
+                    <a href="#">
+                        <div class="img"></div>
+                        <p>西域美农新疆特产五星和田红枣</p>
+                        <span class="price">19.8元(5件99元)</span>
+                        <span class="small">京东商城 | 10-22 13:28</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="img"></div>
+                        <p>西域美农新疆特产五星和田红枣250g*2</p>
+                        <span class="price">19.8元(5件99元)</span>
+                        <span class="small">京东商城 | 10-22 13:28</span>
+                    </a>
+                </li>
+            </ul> -->
+        </div>
+
+
+
+
+        <!-- 底部区域 -->
+        <div class="m_footer">
+            <div class="footer_t clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="javascript:window.scrollTo(0,0);">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部</a>
+            </div>
+            <div class="footer_b">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台        
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+
+
+    </div>
+<script type="text/html" id="list-tpl">
+         <ul>
+    {{each result v i}}
+            <li>
+                <a href="discount.html?productid={{v.productId}}">
+                    <div class="img">
+                        {{@v.productImg}}
+                    </div>
+                    <p>{{v.productName}}</p>
+                    <span class="price">{{v.productPrice}}</span>
+                    <span class="small">{{v.productFrom}} | {{v.productTime}}</span>
+                </a>
+            </li>
+    {{/each}}
+        </ul>
+</script>
+
+
+ 
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common/get.js"></script>
+    <script src="./js/inlanddiscount.js"></script>
+</body>
+
+</html>

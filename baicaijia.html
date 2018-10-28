@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价</title>
+    <link rel="stylesheet" href="./css/baicaijia.css">
+    <!-- 动态监测屏幕宽度变化并计算html根字体的大小 实现rem布局 -->
+    <script src="./js/common/adaptor.js"></script>
+</head>
+
+<body>
+
+    <div class="mmm_container">
+        <!-- 慢慢买头部区域 -->
+        <div class="m_header">
+            <div class="logo">
+                <a href="index.html"></a>
+            </div>
+            <h2>白菜价--淘宝优惠券</h2>
+            <div class="download"></div>
+        </div>
+
+        <!-- 商品标题-->
+        <div class="title-list">
+            <ul class="clearfix title-content">
+                <!-- <li><a href="#" class="current">全部</a></li>
+                <li><a href="#">数码家电</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">数码家电</a></li>
+                <li><a href="#">数码家电</a></li>
+                <li><a href="#">数码家电</a></li>
+                <li><a href="#">数码家电</a></li>
+                <li><a href="#">数码家电</a></li>                
+                <li><a href="#">热销</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">热销</a></li> -->
+            </ul>
+            <div class="search_box">
+                <div class="icon-search"></div>
+            </div>
+        </div>
+
+        <!-- 商品列表 -->
+        <div class="product_list">
+            <ul>
+                <!-- <li>
+                    <a href="#">
+                        <div class="left">
+                            <img src="" alt="">
+                        </div>
+                        <div class="right">
+                            <div class="top">
+                                <p><span class="b">[包邮]</span>双十一红包 今日开启</p>
+                                <div class="price">
+                                    <span>￥0.0</span>
+                                    <del>¥0</del>
+
+                                <em>¥</em>0.0<del>¥0</del>
+                                    
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="t">
+                                    <i>1%</i>
+                                    <b>已领82张</b>
+                                </div>
+                                <div class="b">
+                                    <a href="#" class="l">点此领15元优惠券</a>
+                                    <a href="#" class="">下单链接</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+
+
+
+        <!-- 底部区域 -->
+
+        <div class="m_footer">
+            <div class="footer_t clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="javascript:window.scrollTo(0,0);">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部</a>
+            </div>
+            <div class="footer_b">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台        
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+        <!-- {{if i == 0}} -->
+        <!-- {{if v.titleid == titleid}} -->
+    </div>
+
+    <!-- 准备标题模板 -->
+    <script type="text/html" id="title-tpl">
+    {{each result v i}}
+    
+        {{if i == 0}}
+        <li><a href="#" data-id={{v.titleId}}>{{v.title}}</a></li>
+        {{else}}
+        <li><a href="#" data-id={{v.titleId}}>{{v.title}}</a></li>    
+        {{/if}}
+    {{/each}}
+    </script>
+
+
+    <!-- 准备商品列表详情模板 -->
+    <script type="text/html" id="product-tpl">
+        {{each result v i}}
+            <li>
+                <a href="#">
+                    <div class="left">
+                        {{@v.productImg}}
+                    </div>
+                    <div class="right">
+                        <div class="top">
+                            <p>{{@v.productName}}</p>
+                            <div class="price">
+                                    <span>￥0.0</span>
+                                    <del>¥0</del>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="t">
+                                <i>1%</i>
+                                <b>已领82张</b>
+                            </div>
+                            <div class="b">
+                                {{@v.productCoupon}}
+                                {{@v.productHref}}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common/get.js"></script>
+    <script src="./js/common/iscroll.js"></script>
+    <script src="./js/baicaijia.js"></script>
+</body>
+
+</html>

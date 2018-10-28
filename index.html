@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 动态监测屏幕宽度变化并计算html根字体的大小 实现rem布局 -->
+    <script src="./js/common/adaptor.js"></script>
+</head>
+
+<body>
+    <div class="mmm_container">
+        <!-- 慢慢买头部区域 -->
+        <div class="m_header">
+            <div class="logo"></div>
+            <div class="download"></div>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="m_search">
+            <div class="form">
+                <input type="text" placeholder="请输入你想比价的商品">
+                <button>搜索</button>
+            </div>
+        </div>
+
+        <!-- 导航区域 -->
+        <div class="m_nav">
+            
+               <!-- 这里通过模板动态渲染 -->
+            
+        </div>
+
+        <!-- 列表标题 -->
+        <div class="m_list_title">
+            <span>超值折扣推荐</span>
+            <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+        </div>
+
+        <!-- 产品部分 -->
+        <div class="m_product">
+           <!-- 这里通过模板动态渲染 -->
+
+
+        </div>
+
+        <!-- 更多优惠信息 -->
+        <div class="m_minfo">
+            <a href="#">更多优惠信息>></a>
+        </div>
+
+        <!-- 品牌排行 -->
+        <div class="m_brand">
+                <span>品牌排行</span>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+        </div>
+
+        <!-- 底部区域 -->
+        <div class="m_footer">
+            <div class="footer_t clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部</a>
+            </div>
+            <div class="footer_b">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台        
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 首页导航部分菜单模板 -->
+    <script type="text/html" id="nav-tpl">
+     <ul class="clearfix">
+        {{ each result v i }}
+        <li>
+            <a href="{{v.titlehref}}">
+                <!-- <img src="{{ v.img }}" alt=""> -->
+                {{@v.img }}
+                <!-- <div>{{ v.img }}</div> -->
+                <p>{{ v.name }}</p>
+            </a>
+        </li>
+        {{ /each }}
+    </ul>
+    </script>
+
+    <!-- 产品部分的模板 -->
+    <script type="text/html" id="tpl">
+        <ul class="clearfix">
+            {{ each result v i }}
+            <li>
+                <a href="#">
+                    <div class="pic">{{@v.productImgSm}}</div>
+                    <div class="info">
+                        <div class="title">
+                            {{ v.productName }}
+                            <span>{{v.productPinkage}}</span>
+                        </div>
+
+                        <div class="other">
+                            <span>{{v.productFrom}} | {{v.productTime}}</span>                          
+                        </div>
+                        <span class="comment clearfix">
+                                <i class="icon-comment"></i>
+                                <i class="num">
+                                     {{v.productComCount.replace("有","").replace("人评论","")}}
+                                </i>
+                               
+                        </span>
+                    </div>
+                </a>
+            </li>
+            {{ /each }}
+        </ul>
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

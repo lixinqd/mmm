@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券</title>
+    <link rel="stylesheet" href="./css/coupon.css">
+    <!-- 动态监测屏幕宽度变化并计算html根字体的大小 实现rem布局 -->
+    <script src="./js/common/adaptor.js"></script>
+</head>
+
+<body>
+    <div class="mmm_container">
+        <!-- 慢慢买头部区域 -->
+        <div class="m_header">
+            <div class="logo">
+                <a href="index.html"></a>
+            </div>
+            <h2>优惠券</h2>
+            <div class="download"></div>
+        </div>
+
+        <!-- 优惠券商品图片列表-->
+       <div class="coupon_list">
+           <!-- <ul class="clearfix">
+               <li>
+                   <a href="#">
+                       <div class="img">
+                           <img src="" alt="">
+                       </div>
+                       <p>肯德基</p>
+                   </a>
+               </li>
+           </ul> -->
+       </div>
+
+
+        <!-- 底部区域 -->
+
+        <div class="m_footer">
+            <div class="footer_t clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="javascript:window.scrollTo(0,0);">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部</a>
+            </div>
+            <div class="footer_b">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台        
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 准备优惠券商品列表模板 -->
+    <script type="text/html" id="title-tpl">
+        <ul class="clearfix">
+        {{each result v i}}           
+               <li>
+                   <a href="couponproduct.html?couponid={{v.couponId}}">
+                       <div class="img">
+                           <img src="{{v.couponImg}}" alt="">
+                       </div>
+                       <p>{{v.couponTitle}}</p>
+                   </a>
+               </li>          
+        {{/each}}
+        </ul>
+    </script>
+   
+
+   
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common/get.js"></script>
+    <script src="./js/common/iscroll.js"></script>
+    <script src="./js/coupon.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+.product_top {
+  height: 370px;
+  width: 100%;
+}
+.product_top .title {
+  height: 200px;
+  padding: 20px;
+}
+.product_top .title p {
+  font-size: 16px;
+  text-align: center;
+}
+.product_top .img {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+}
+.product_top .logo a {
+  display: block;
+  position: relative;
+}
+.product_top .logo a img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+.tab a {
+  float: left;
+  width: 33.3%;
+  height: 34px;
+  background-color: orange;
+  border: 1px solid red;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 34px;
+  margin-top: 20px;
+}
+.p-list {
+  width: 100%;
+  height: 80px;
+}
+.p-list .p-list-top {
+  height: 34px;
+  position: relative;
+}
+.p-list .p-list-top .jd {
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.p-list .p-list-top a {
+  position: absolute;
+  left: 45px;
+  top: 10px;
+}
+.p-list .p-list-top .price {
+  position: absolute;
+  right: 100px;
+  top: 10px;
+  color: red;
+  font-weight: 700;
+}
+.p-list .p-list-top span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 56px;
+  height: 24px;
+  background-color: orangered;
+  text-align: center;
+  color: #fff;
+  border-radius: 6px;
+}
+.p-list p {
+  line-height: 38px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 5px solid #ccc;
+  font-size: 12px;
+}
+.f p {
+  width: 100%;
+  height: 34px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 34px;
+}
+.product_content {
+  width: 100%;
+}
+.product_content li {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+.product_content .top {
+  width: 100%;
+  height: 20px;
+}
+.product_content .top .name {
+  float: left;
+}
+.product_content .top .time {
+  float: right;
+}
+.product_content .middle {
+  width: 100%;
+}
+.product_content .middle .shop {
+  float: right;
+}
+.more {
+  width: 100%;
+}
+.more p {
+  line-height: 35px;
+  text-align: center;
+  background-color: #ccc;
+  margin: 20px 8px;
+  border-radius: 5px;
+}
